@@ -4,7 +4,7 @@ namespace App\Controller;
 
 use Symfony\Component\HttpFoundation\Response;
 
-class HelloController extends AbstractController
+class HelloController 
 {
     public function index()
     {
