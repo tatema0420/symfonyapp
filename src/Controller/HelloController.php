@@ -14,8 +14,8 @@ class HelloController extends AbstractController
      */
     public function index(Request $request)
     {
-        $name = $request->get('name');
-        $pass = $request->get('pass');
+        $name = $request->query->get('name');
+        $pass = $request->query->get('pass');
         $result = '<html><body><ol>';
         $result .= '<h1>Subscribed Services</h1>';
         $result .= '<p>name:' . $name . '</p>';
