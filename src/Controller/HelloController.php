@@ -19,6 +19,7 @@ class HelloController extends AbstractController
      */
     public function index(Request $request)
     {
+        // Serializerをインスタンス化するときに引数で渡す値は配列でないといけない。
         $encoders = array(new XmlEncoder());
         $normalizers = array(new ObjectNormalizer());
         $serializer = new Serializer($normalizers, $encoders);
