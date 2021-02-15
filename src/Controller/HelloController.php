@@ -12,6 +12,16 @@ class HelloController
      */
     public function index()
     {
-        return new Response('Hello Symfony!');
+        $result = <<< EOM
+        <html>
+        <head><title>Hello</title></head>
+        <body>
+        <h1>Hello Symfony!</h1>
+        <p>this is Symfony sample page.</p>
+        </body>
+        </html>
+        EOM;
+
+        return new Response($result);
     }
 }
